@@ -40,7 +40,7 @@
         </div>
         <div class="name">
             @if (auth()->check())
-                <p><b>{{ auth()->user()->name }}</b></p>
+                <p><b>{{ auth()->user()->name}}</b></p>
             @endif
         </div>
         <ul class="list">

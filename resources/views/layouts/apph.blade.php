@@ -39,7 +39,7 @@
         </div>
         <div class="name">
             @if (auth()->check())
-                <p><b>{{ auth()->user()->name }}</b></p>
+                <p><b>{{ auth()->user()->name}}</b></p>
             @endif
         </div>
         <ul class="list">
@@ -72,7 +72,7 @@
             <li class="list_item">
                 <div class="list_button list_button--click">
                     <img src="Img/Assets/despc.svg" class="list_img">
-                    <a href="#" class="nav_link" title="Despachos">Despachos</a>
+                    <a href="{{route('catacarrito.index')}}" class="nav_link" title="Despachos">Despachos</a>
                 </div>
             </li>
             <li class="list_item">
