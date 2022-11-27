@@ -5,8 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class tbl_catalogo extends Model{
+class tbl_rol extends Model{
     use HasFactory;
-    protected $primaryKey = 'id_catalogo';
-    public $table = "tbl_catalogo";
+    protected $primaryKey = 'id_rol';
+    public $table = "tbl_rol";
 }
