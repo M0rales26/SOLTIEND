@@ -19,7 +19,11 @@ return new class extends Migration
             $table->integer('precio');
             $table->string('contenido_neto',40);
             $table->string('foto');
+            $table->unsignedBigInteger('usuario_id');
             $table->timestamps();
+
+            $table->foreign('usuario_id', 'fk_tbl_catalogo_usuario_id_users')->references('id_usuario')
+                ->on('users');
         });
     }
 

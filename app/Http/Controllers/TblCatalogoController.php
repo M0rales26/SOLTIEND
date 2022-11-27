@@ -14,7 +14,7 @@ class TblCatalogoController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(){
-        $datos['catalogo'] = tbl_catalogo::paginate(50);
+        $datos['catalogo'] = tbl_catalogo::where('usuario_id', auth()->user()->id_usuario)->get();
         return view('updates.product.catalogo', $datos);
     }
 

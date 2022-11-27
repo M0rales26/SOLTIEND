@@ -10,6 +10,7 @@
                     @csrf
                     <div class="input-field">
                         <input type="text" placeholder="Nombre Producto" name="nombrep" id="nombrep">
+                        <input type="hidden" name="usuario_id" value="{{auth()->user()->id_usuario}}">
                         <img src="{{asset('Img/Assets/cookie.svg')}}" class="icon">
                     </div>
                     <div class="input-field">
