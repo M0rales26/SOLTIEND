@@ -3,6 +3,6 @@
 
 @section('content')
     @if (auth()->check())
-        <h1>Welcome To Our App -> {{ auth()->user()->id }}</h1>
+        <h1>Welcome To Our App -> {{ auth()->user()->rol_id }}</h1>
     @endif
 @endsection

@@ -16,10 +16,11 @@ class RegisterController extends Controller{
             'name' => 'required',
             'email' => 'required|email',
             'password' => 'required|confirmed',
+            'rol_id' => 'required',
         ]);
 
-        $user = User::create(request(['name','email','password']));
-        \auth()->login($user);
-        return \redirect()->to('/');
+        $user = User::create(request(['name','email','password','rol_id']));
+        auth()->login($user);
+        return redirect()->to('/');
     }
 }
