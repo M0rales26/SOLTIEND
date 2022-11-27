@@ -59,7 +59,7 @@
             <li class="list_item">
                 <div class="list_button list_button--click">
                     <img src="{{asset('Img/Assets/table.svg')}}" class="list_img">
-                    <a href="{{route('catacarrito.index')}}" class="nav_link" title="Productos">Productos</a>
+                    <a href="{{route('shop')}}" class="nav_link" title="Productos">Productos</a>
                 </div>
             </li>
             <li class="list_item list_item--click">

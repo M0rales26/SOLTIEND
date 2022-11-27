@@ -42,8 +42,8 @@ Route::resource('catalogo', TblCatalogoController::class);
 Route::get('/contacto', [ContactoController::class, 'index'])
     ->name('contacto.index');
 
-Route::get('/catalogoc', [CarritoController::class, 'index'])
-    ->name('catacarrito.index');
+Route::get('/productos', [CarritoController::class, 'index'])
+    ->name('shop');
 
 //-----------------------------------------------------------//
 Route::get('/logout',[SessionsController::class, 'destroy'])

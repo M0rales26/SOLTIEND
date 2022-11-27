@@ -24,7 +24,12 @@
                         <p class="border border-red-500 rounded-md bg-red-100 w-full text-red-600 p-2 my-2">* {{ $message }}</p>
                     @enderror
                     <div class="input-field">
-                        <input type="text" placeholder="Rol" name="rol_id" id="rol_id">
+                        <select name="rol_id">
+                            <option value="">Elegir Rol</option>
+                            @foreach ($rol as $item)
+                                <option value="{{$item['id_rol']}}">{{$item['rol']}}</option>
+                            @endforeach
+                        </select>
                         <img src="Img/Assets/user.svg" class="icon">
                     </div>
                     @error('rol')

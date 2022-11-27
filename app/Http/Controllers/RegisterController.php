@@ -4,11 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\tbl_rol;
 
 class RegisterController extends Controller{
     //
     public function create(){
-        return view('auth.register');
+        $rol = tbl_rol::all();
+        return view('auth.register', compact('rol'));
     }
 
     public function store(){
