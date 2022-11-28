@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SessionsController;
 use App\Http\Controllers\TblCatalogoController;
-use App\Http\Controllers\CarritoController;
+use App\Http\Controllers\CartController;
 
 
 /*
@@ -42,8 +42,23 @@ Route::resource('catalogo', TblCatalogoController::class);
 Route::get('/contacto', [ContactoController::class, 'index'])
     ->name('contacto.index');
 
-Route::get('/productos', [CarritoController::class, 'index'])
+Route::get('/productos', [CartController::class, 'shop'])
     ->name('shop');
+
+Route::get('/carrito', [CartController::class, 'cart'])
+    ->name('cart.index');
+
+Route::post('/add', [CartController::class, 'store'])
+    ->name('cart.store');
+
+Route::post('/update', [CartController::class, 'update'])
+    ->name('cart.update');
+
+Route::post('/remove', [CartController::class, 'remove'])
+    ->name('cart.remove');
+
+Route::post('/clear', [CartController::class, 'clear'])
+    ->name('cart.clear');
 
 //-----------------------------------------------------------//
 Route::get('/logout',[SessionsController::class, 'destroy'])

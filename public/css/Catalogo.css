@@ -19,7 +19,7 @@ body{
 .card{
     position: relative;
     width: 231px;
-    height: 320px;
+    height: auto;
     margin: 5px 20px;
     border: 3px solid var(--color-principal--);
     padding: 12px;

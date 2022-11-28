@@ -91,13 +91,13 @@ main{
 /* FIN LOG OUT */
 /* ICONO CARRITO */
 .car_nav{
-    width: 150px;
+    width: 200px;
     height: 100%;
     display: flex;
     padding: 0 20px;
     justify-content: center;
     align-items: center;
-    margin-left: 5%;
+    margin-left: 2%;
     /* border: 1px solid black; */
 }
 .car_link{
@@ -114,6 +114,10 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.button_car p{
+    color: var(--color-principal--);
+    margin-right: 7px;
 }
 .button_car img{
     margin-left: 10px;

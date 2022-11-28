@@ -1,7 +1,8 @@
 @extends('layouts.carrito.appcar')
-@section('title' , 'CATALOGO')
+@section('title' , 'PRODUCTOS')
 
 @section('content')
+    {{-- {{Cart::getContent()}} --}}
     <article class="container">
         <ul class="items">
             @foreach ($catalogo as $cat)
@@ -13,7 +14,11 @@
                         {{$cat->contenido_neto}}
                     </p>
                     <div>
-                        <button class="add">Agregar al Carrito</button>
+                        <form action="{{route('cart.store')}}" method="POST">
+                            @csrf
+                            <input type="hidden" name="products_id" id="products_id" value="{{$cat->id_catalogo}}">
+                            <button class="add">Agregar al Carrito</button>
+                        </form>
                     </div>
                 </li>
             @endforeach

@@ -28,7 +28,8 @@
                 </div>
                 <div class="car_nav">
                     <div class="button_car">
-                        <a href="#" class="car_link" title="Carrito de Compras">Carrito</a>
+                        <p><b>{{Cart::getTotalQuantity()}}</b></p>
+                        <a href="{{route('cart.index')}}" class="car_link" title="Carrito de Compras">Ver Carrito</a>
                         <img src="{{asset('Img/Assets/cart.svg')}}" class="list_img">
                     </div>
                 </div>
