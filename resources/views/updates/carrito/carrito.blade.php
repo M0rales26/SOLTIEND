@@ -19,7 +19,7 @@
                                 @csrf
                                 <div class="input_ed">
                                     <input type="hidden" name="id" id="id" value="{{$cat->id}}">
-                                    <input type="number" name="quantity" id="quantity" value="{{$cat->quantity}}" class="quan">
+                                    <input type="number" name="quantity" id="quantity" min="1" value="{{$cat->quantity}}" class="quan">
                                 </div>
                                 <div class="button_ed">
                                     <button class="ed">Editar</button>
