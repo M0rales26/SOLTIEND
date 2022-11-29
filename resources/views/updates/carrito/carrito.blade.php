@@ -18,7 +18,7 @@
                             <form action="{{route('cart.update')}}" method="POST">
                                 @csrf
                                 <div class="input_ed">
-                                    <input type="hidden" name="id" id="id" value="{{$cat->id_catalogo}}">
+                                    <input type="hidden" name="id" id="id" value="{{$cat->id}}">
                                     <input type="number" name="quantity" id="quantity" value="{{$cat->quantity}}" class="quan">
                                 </div>
                                 <div class="button_ed">
@@ -29,7 +29,7 @@
                         <div class="a">
                             <form action="{{route('cart.remove')}}" method="POST">
                                 @csrf
-                                <input type="hidden" name="id" id="id" value="{{$cat->id_catalogo}}">
+                                <input type="hidden" name="id" id="id" value="{{$cat->id}}">
                                 <button class="re">Remover</button>
                             </form>
                         </div>

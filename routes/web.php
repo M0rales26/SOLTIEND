@@ -19,46 +19,41 @@ use App\Http\Controllers\CartController;
 |
 */
 
+//-----------------------------------------------------------//
 Route::get('/', function(){return view('home.home');})
     ->middleware('auth')
     ->name('home.index');
-
+//-----------------------------------------------------------//
 Route::get('/login',[SessionsController::class, 'create'])
     ->middleware('guest')
     ->name('login.index');
-
 Route::post('/login',[SessionsController::class, 'store'])
     ->name('login.store');
-
 Route::get('/register',[RegisterController::class, 'create'])
     ->middleware('guest')
     ->name('register.index');
-
 Route::post('/register',[RegisterController::class, 'store'])
     ->name('register.store');
-
+//-----------------------------------------------------------//
 Route::resource('catalogo', TblCatalogoController::class);
-
+//-----------------------------------------------------------//
 Route::get('/contacto', [ContactoController::class, 'index'])
     ->name('contacto.index');
-
+//-----------------------------------------------------------//
 Route::get('/productos', [CartController::class, 'shop'])
     ->name('shop');
-
 Route::get('/carrito', [CartController::class, 'cart'])
     ->name('cart.index');
-
 Route::post('/add', [CartController::class, 'store'])
     ->name('cart.store');
-
 Route::post('/update', [CartController::class, 'update'])
     ->name('cart.update');
-
 Route::post('/remove', [CartController::class, 'remove'])
     ->name('cart.remove');
-
 Route::post('/clear', [CartController::class, 'clear'])
     ->name('cart.clear');
+//-----------------------------------------------------------//
+
 
 //-----------------------------------------------------------//
 Route::get('/logout',[SessionsController::class, 'destroy'])

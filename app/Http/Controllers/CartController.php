@@ -8,7 +8,7 @@ use Cart;
 
 class CartController extends Controller{
     public function shop(){
-        $datos['catalogo'] = tbl_catalogo::paginate(50);
+        $datos['catalogo'] = tbl_catalogo::paginate(60);
         return view('updates.carrito.catacarrito', $datos);
     }
 
@@ -24,13 +24,15 @@ class CartController extends Controller{
             $products->nombrep,
             $products->precio,
             1,
-            array('imagen'=>$products->foto,'descripcion'=>$products->contenido_neto)
+            array('imagen'=>$products->foto,
+                'descripcion'=>$products->contenido_neto)
         );
         return back();
     }
 
     public function remove(Request $request){
-        Cart::remove(['id'=>$request->id_catalogo]);
+        // $products = tbl_catalogo::where('id', $request->id_catalogo)->firstOrFail();
+        Cart::remove(['id'=>$request->id]);
         return back();
     }
 
@@ -40,13 +42,13 @@ class CartController extends Controller{
     }
 
     public function update(Request $request){
-        Cart::update($request->id_catalogo,
-        array(
-            'quantity' => array(
-                'relative' => false,
-                'value' => $request->quantity
-            ),
-        ));
+        Cart::update($request->id,
+            array(
+                'quantity' => array(
+                    'relative' => false,
+                    'value' => $request->quantity
+                ),
+            ));
         return back();
     }
 }
