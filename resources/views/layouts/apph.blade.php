@@ -51,11 +51,11 @@
                     <h4>SOLTIEND</h4>
                 </div>
                 <div class="circle">
-                    <img src="Img/user.png">
+                    <img src="{{auth()->user()->fotop}}">
                 </div>
                 <div class="name">
                     @if (auth()->check())
-                        <p><b>{{ auth()->user()->name}}</b></p>
+                        <p><b>{{auth()->user()->name}}</b></p>
                     @endif
                 </div>
                 <ul class="list">

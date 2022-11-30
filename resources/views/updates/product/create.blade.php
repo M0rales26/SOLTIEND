@@ -22,8 +22,8 @@
                         <img src="{{asset('Img/Assets/content.svg')}}" class="icon">
                     </div>
                     <div class="input-field">
-                        <input type="file" name="foto" id="foto">
-                        <img src="{{asset('Img/Assets/file.svg')}}" class="icon" accept=".jpg,.png">
+                        <input type="file" name="foto" id="foto" accept=".jpg,.png">
+                        <img src="{{asset('Img/Assets/file.svg')}}" class="icon" >
                     </div>
                     <div class="buttons">
                         <div class="input-field button">
