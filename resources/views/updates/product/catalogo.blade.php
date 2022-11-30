@@ -2,7 +2,7 @@
 @section('title' , 'CATALOGO')
 
 @section('content')
-    <a href="{{route('catalogo.create')}}" class="create">Crear Producto</a>
+    <a href="{{route('catalogo.create')}}" class="create">Agregar Producto</a>
     <article class="container">
         <ul class="items">
             @foreach ($catalogo as $cat)

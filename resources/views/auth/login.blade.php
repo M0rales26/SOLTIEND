@@ -21,11 +21,11 @@
                     @error('message')
                         <p class="border border-red-500 rounded-md bg-red-100 w-full text-red-600 p-2 my-2">* {{$message}}</p>
                     @enderror
-                    <div class="checkbox-text">
+                    {{-- <div class="checkbox-text">
                         <div class="checkbox-content">
                         </div>
                         <a href="#" class="text">¿Olvidaste tu contraseña?</a>
-                    </div>
+                    </div> --}}
                     <div class="input-field button">
                         <input type="submit" value="Iniciar Sesión">
                     </div>
