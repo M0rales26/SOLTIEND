@@ -35,8 +35,12 @@ Route::get('/register',[RegisterController::class, 'create'])
     ->name('register.index');
 Route::post('/register',[RegisterController::class, 'store'])
     ->name('register.store');
-Route::post('/actualizar',[RegisterController::class, 'update'])
+Route::get('/editar/{id}',[RegisterController::class, 'edit'])
+    ->name('register.edit');
+Route::put('/editar/{id}',[RegisterController::class, 'update'])
     ->name('register.update');
+// Route::delete('/eliminar/{id}',[RegisterController::class, 'destroy'])
+//     ->name('register.destroy');
 //-----------------------------------------------------------//
 Route::resource('catalogo', TblCatalogoController::class);
 //-----------------------------------------------------------//

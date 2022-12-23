@@ -34,7 +34,7 @@
                 </div>
                 <div class="nav_nav">
                     <div class="button_edit">
-                        <a href="#" class="edit_link" title="Actualizar Perfil">Editar Datos</a>
+                        <a href="{{url('editar', auth()->user()->id_usuario)}}" class="edit_link" title="Actualizar Perfil">Editar Datos</a>
                         <img src="Img/Assets/edit.svg" class="list_img">
                     </div>
                 </div>
@@ -51,7 +51,9 @@
                     <h4>SOLTIEND</h4>
                 </div>
                 <div class="circle">
-                    <img src="{{auth()->user()->fotop}}">
+                    @if (auth()->check())
+                        <img src="{{auth()->user()->fotop}}">
+                    @endif
                 </div>
                 <div class="name">
                     @if (auth()->check())
@@ -109,7 +111,7 @@
                 </div>
                 <div class="nav_nav">
                     <div class="button_edit">
-                        <a href="#" class="edit_link" title="Actualizar Perfil">Editar Datos</a>
+                        <a href="{{url('editar', auth()->user()->id_usuario)}}" class="edit_link" title="Actualizar Perfil">Editar Datos</a>
                         <img src="Img/Assets/edit.svg" class="list_img">
                     </div>
                 </div>
@@ -126,7 +128,9 @@
                     <h4>SOLTIEND</h4>
                 </div>
                 <div class="circle">
-                    <img src="Img/user.png">
+                    @if (auth()->check())
+                        <img src="{{auth()->user()->fotop}}">
+                    @endif
                 </div>
                 <div class="name">
                     @if (auth()->check())

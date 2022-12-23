@@ -35,19 +35,28 @@ class RegisterController extends Controller{
         return redirect()->to('/');
     }
 
+    public function edit($id){
+        $datosperfil = User::find($id);
+        return view('auth.user.edituser', compact('datosperfil'));
+    }
+
     public function update(Request $request, $id){
-        $datoscatalogo = request()->except(['_token', '_method']);
-        //
+        $datosperfil = request()->except(['_token', '_method']);
         if ($imagen = $request->file('fotop')) {
             $rutaguardarimg = 'perfil/';
             $imagenprod = date('YmdHis') . "." . $imagen->getClientOriginalExtension();
             $imagen->move($rutaguardarimg, $imagenprod);
-            $datoscatalogo['fotop'] = $imagenprod;
+            $datosperfil['fotop'] = $imagenprod;
         } else {
-            unset($datoscatalogo['fotop']);
+            unset($datosperfil['fotop']);
         }
         //
-        User::where('id_usuario', '=', $id)->update($datoscatalogo);
+        User::where('id_usuario', '=', $id)->update($datosperfil);
         // return redirect()->route('catalogo.index');
     }
+
+    // public function destroy($id){
+    //     User::destroy($id);
+    //     return redirect()->route('login.index');
+    // }
 }
