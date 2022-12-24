@@ -37,7 +37,7 @@ class RegisterController extends Controller{
 
     public function edit($id){
         $datosperfil = User::find($id);
-        return view('auth.user.edituser', compact('datosperfil'));
+        return view('auth.user.edit', compact('datosperfil'));
     }
 
     public function update(Request $request, $id){
@@ -52,7 +52,7 @@ class RegisterController extends Controller{
         }
         //
         User::where('id_usuario', '=', $id)->update($datosperfil);
-        // return redirect()->route('catalogo.index');
+        return redirect()->route('home.index');
     }
 
     // public function destroy($id){

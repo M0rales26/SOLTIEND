@@ -26,7 +26,7 @@
         </div>
         <div class="nav_nav">
             <div class="button_edit">
-                <a href="#" class="edit_link" title="Actualizar Perfil">Editar Datos</a>
+                <a href="{{url('editar', auth()->user()->id_usuario)}}" class="edit_link" title="Actualizar Perfil">Editar Datos</a>
                 <img src="{{asset('Img/Assets/edit.svg')}}" class="list_img">
             </div>
         </div>
