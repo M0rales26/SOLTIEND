@@ -15,7 +15,7 @@
                     </div>
                     <div class="input-field">
                         <input type="email" name="email" id="email" value="{{$datosperfil->email}}">
-                        <img src="{{asset('Img/Assets/price.svg')}}" class="icon">
+                        <img src="{{asset('Img/Assets/email.svg')}}" class="icon">
                     </div>
                     <div class="input-field">
                         <input type="file" name="foto" id="foto">

@@ -6,7 +6,8 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SessionsController;
 use App\Http\Controllers\TblCatalogoController;
 use App\Http\Controllers\CartController;
-
+use App\Http\Controllers\TiendaController;
+use App\Http\Controllers\ProductoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -60,8 +61,10 @@ Route::post('/remove', [CartController::class, 'remove'])
 Route::post('/clear', [CartController::class, 'clear'])
     ->name('cart.clear');
 //-----------------------------------------------------------//
-
-
+Route::get('tiendas', [TiendaController::class, 'index'])
+    ->name('tiendas.index');
+Route::get('tienda/{id}', [ProductoController::class, 'index'])
+    ->name('tienda.index');
 //-----------------------------------------------------------//
 Route::get('/logout',[SessionsController::class, 'destroy'])
     ->middleware('auth')

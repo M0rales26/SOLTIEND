@@ -50,6 +50,9 @@ body{
     list-style-type: none;
     padding: 0;
 }
+.items a{
+    text-decoration: none;
+}
 .items li{
     display: inline-block;
     position: relative;

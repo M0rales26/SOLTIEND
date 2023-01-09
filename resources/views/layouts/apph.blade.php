@@ -52,7 +52,7 @@
                 </div>
                 <div class="circle">
                     @if (auth()->check())
-                        <img src="{{auth()->user()->fotop}}">
+                        <img src="perfil/{{auth()->user()->fotop}}">
                     @endif
                 </div>
                 <div class="name">
@@ -75,8 +75,8 @@
                     </li>
                     <li class="list_item list_item--click">
                         <div class="list_button list_button--click">
-                            <img src="{{asset('Img/Assets/notif.svg')}}" class="list_img">
-                            <a href="#" class="nav_link" title="Notificaciones">Notificaciones</a>
+                            <img src="{{asset('Img/Assets/shop.svg')}}" class="list_img">
+                            <a href="{{route('tiendas.index')}}" class="nav_link" title="Tiendas">Tiendas</a>
                             {{-- <img src="Img/Assets/arrow.svg" class="list_arrow"> --}}
                         </div>
                         {{-- <ul class="list_show">
