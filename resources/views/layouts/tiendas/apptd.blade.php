@@ -62,7 +62,7 @@
             </li>
             <li class="list_item">
                 <div class="list_button list_button--click">
-                    <img src="Img/Assets/table.svg" class="list_img">
+                    <img src="Img/Assets/coffeebean.svg" class="list_img">
                     <a href="{{route('shop')}}" class="nav_link" title="Productos">Productos</a>
                 </div>
             </li>

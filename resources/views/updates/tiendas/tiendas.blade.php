@@ -9,8 +9,7 @@
                     <li class="card">
                         <img src="perfil/{{$shop->fotop}}" width="180" height="160">
                         <p class="info_text">
-                            {{$shop->name}}<br>
-                            {{$shop->email}}
+                            {{$shop->name}}
                         </p>
                     </li>
                 </a>

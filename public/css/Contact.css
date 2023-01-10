@@ -16,7 +16,6 @@
     height: 45%;
     margin-top: 6%;
     text-align: center;
-    /* border: 1px solid black; */
 }
 .logo{
     position: absolute;
@@ -25,7 +24,6 @@
     font-size: 18px;
     padding: 20px 35px;
     margin-top: 10px;
-    color: black;
 }
 .logo img{
     margin-right: 10px
@@ -35,6 +33,7 @@
     margin-bottom: 10px;
     align-items: center;
     justify-content: center;
+    color: var(--color-principal--);
 }
 .data{
     display: flex;
@@ -42,27 +41,14 @@
     bottom: 6%;
     left: 6%;
 }
-.link1{
+.link1,.link2,.link3{
     font-size: 18px;
     padding: 20px 35px;
     align-items: center;
     margin-top: 10px;
-    color: black;
-}
-.link2{
-    font-size: 18px;
-    padding: 20px 35px;
-    align-items: center;
-    margin-top: 10px;
-    color: black;
-}
-.link3{
-    font-size: 18px;
-    padding: 20px 35px;
-    align-items: center;
-    margin-top: 10px;
-    color: black;
+    color: var(--color-principal--);
 }
 .link1 p,.link2 p,.link3 p{
+    color: black;
     text-align: center;
 }

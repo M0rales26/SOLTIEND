@@ -1,14 +1,18 @@
-@extends('layouts.carrito.appcar')
-@section('title' , 'PRODUCTOS')
+@extends('layouts.tiendas.appinftienda')
+@section('title' , 'TIENDA')
 
 @section('content')
-    <div>
+    <div class="info_shop">
         @foreach ($tendero as $pers)
             <img src="/perfil/{{$pers->fotop}}" width="180" height="160">
-            <p class="info_text">
-                {{$pers->name}}<br>
-                {{$pers->email}}
-            </p>
+            <div class="text_shop">
+                <p class="info_text_s">
+                    {{$pers->name}}
+                </p>
+                <p class="info_text_s">
+                    {{$pers->email}}
+                </p>
+            </div>
         @endforeach
     </div>
     <article class="container">

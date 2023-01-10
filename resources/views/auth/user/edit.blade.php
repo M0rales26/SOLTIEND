@@ -18,7 +18,7 @@
                         <img src="{{asset('Img/Assets/email.svg')}}" class="icon">
                     </div>
                     <div class="input-field">
-                        <input type="file" name="foto" id="foto">
+                        <input type="file" name="fotop" id="fotop">
                         <img src="{{asset('Img/Assets/file.svg')}}" class="icon">
                     </div>
                     <div class="buttons">

@@ -5,7 +5,7 @@
     <div class="container">
         <div class="logo">
             <div class="la">
-                <img src="{{asset('Img/Assets/logoc.svg')}}">
+                <img src="{{asset('Img/Assets/logo.svg')}}">
                 <h1>SOLTIEND</h1>
             </div>
             <h4>Contamos Contigo</h4>
